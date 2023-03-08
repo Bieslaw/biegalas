@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./ClassLibrary1/ClassLibrary1.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./ClassLibrary1/ClassLibrary1.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./TestProject1/TestProject1.csproj
